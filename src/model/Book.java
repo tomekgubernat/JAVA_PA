@@ -6,7 +6,7 @@ public class Book extends MediaItems implements Readable {
 
     private int numberOfPages;
 
-    public Book(String title, String author, Date releaseDate){
+    public Book(String title, String author, Date releaseDate, int numberOfPages){
         super(title, author, releaseDate);
         this.numberOfPages = numberOfPages;
     }

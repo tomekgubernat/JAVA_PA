@@ -2,16 +2,23 @@ package persistence;
 
 import model.MediaItems;
 
+import java.util.ArrayList;
+
 public class Mediatheque {
-    MediaItems mediaItems;
 
-    public void addMediaItems(){
+    private ArrayList<MediaItems> allMediaItems = new ArrayList<>();
 
-    }
-    public void removeMediaItems(){
+    public void addMediaItems(MediaItems item){
 
     }
-    public void editDateInMediaItems(){
+    public void removeMediaItems(MediaItems item){
 
+    }
+    public void editDateInMediaItems(MediaItems item){
+
+    }
+
+    public ArrayList<MediaItems> getAllMediaItems() {
+        return allMediaItems;
     }
 }

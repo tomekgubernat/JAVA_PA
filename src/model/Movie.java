@@ -6,7 +6,7 @@ public class Movie extends MediaItems implements Watchable, Listenable {
 
     private int length;
 
-    public Movie(String title, String author, Date releaseDate){
+    public Movie(String title, String author, Date releaseDate, int length){
         super(title, author, releaseDate);
         this.length = length;
     }
