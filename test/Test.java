@@ -45,5 +45,38 @@ public class Test {
 
         }
 
+        @org.junit.jupiter.api.Test
+                void checkIfUserCanRentAnUnaveliableItem(){
+            final int userRentalListAfterRental = 0;
+            user.rentItem(book);
+
+            assertFalse(book.isAvailable());
+            assertEquals(userRentalListAfterRental, user.getRentedList().size());
+        }
+
+        @org.junit.jupiter.api.Test
+                void checkIfUserReturnItems(){
+            final int userRentalListAfterRental = 0;
+            user.rentItem();
+            user.rentItem();
+
+            assertTrue(movie.isAvailable());
+            assertEquals(userRentalListAfterRental, user.getRentedList().size());
+        }
+
+        @org.junit.jupiter.api.Test
+                void checkIfManagerCanRemoveItemsFromLibrary(){
+            final int mediathequeListAfterRemoveItem = 1;
+            manager.removeFromMediatheque(movie);
+
+            assertEquals(mediathequeListAfterRemoveItem, mediatheque.getAllMediaItems().size());
+        }
+
+        @org.junit.jupiter.api.Test
+                void checkIfManagerCanAddItemsFromMediatheque(){
+            final int mediathequeListAfterRemoveItem = 3;
+            manager.addToMediatheque(book);
+            assertEquals(mediathequeListAfterRemoveItem, mediatheque.getAllMediaItems().size());
+        }
     }
 }
