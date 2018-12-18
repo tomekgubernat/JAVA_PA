@@ -1,28 +1,21 @@
 import controller.Manager;
 import controller.User;
 import model.Book;
-import model.MediaItems;
 import model.Movie;
-import model.MusicAlbum;
 import org.junit.jupiter.api.BeforeEach;
 import persistence.Mediatheque;
 
 import java.util.Date;
 
+import static org.junit.jupiter.api.Assertions.*;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
-public class Test {
+class Test {
 
     private User user;
     private Manager manager;
-    private MediaItems mediaItems;
     private Mediatheque mediatheque;
     private Book book;
     private Movie movie;
-    private MusicAlbum musicAlbum;
 
     @BeforeEach
     void test(){
@@ -36,44 +29,42 @@ public class Test {
         user = new User(mediatheque);
         manager = new Manager(mediatheque);
 
+
         @org.junit.jupiter.api.Test
         void checkIfUserCanRentAnAveliableItem(){
             final int userRenatlListAfterRental = 0;
             user.rentItem(movie);
-        assertFalse(movie.isAvailable());
-        assertEquals(userRenatlListAfterRental, user.getRentedList().size());
-
+            assertFalse(movie.isAvailable());
+            assertEquals(userRenatlListAfterRental, user.getRentedList().size());
         }
 
         @org.junit.jupiter.api.Test
-                void checkIfUserCanRentAnUnaveliableItem(){
+        void checkIfUserCanRentAnUnaveliableItem(){
             final int userRentalListAfterRental = 0;
             user.rentItem(book);
-
             assertFalse(book.isAvailable());
             assertEquals(userRentalListAfterRental, user.getRentedList().size());
         }
 
         @org.junit.jupiter.api.Test
-                void checkIfUserReturnItems(){
+        void checkIfUserReturnItems(){
             final int userRentalListAfterRental = 0;
-            user.rentItem();
-            user.rentItem();
+            user.rentItem(movie);
+            user.rentItem(movie);
 
             assertTrue(movie.isAvailable());
             assertEquals(userRentalListAfterRental, user.getRentedList().size());
         }
 
         @org.junit.jupiter.api.Test
-                void checkIfManagerCanRemoveItemsFromLibrary(){
+        void checkIfManagerCanRemoveItemsFromLibrary(){
             final int mediathequeListAfterRemoveItem = 1;
             manager.removeFromMediatheque(movie);
-
             assertEquals(mediathequeListAfterRemoveItem, mediatheque.getAllMediaItems().size());
         }
 
         @org.junit.jupiter.api.Test
-                void checkIfManagerCanAddItemsFromMediatheque(){
+        void checkIfManagerCanAddItemsFromMediatheque(){
             final int mediathequeListAfterRemoveItem = 3;
             manager.addToMediatheque(book);
             assertEquals(mediathequeListAfterRemoveItem, mediatheque.getAllMediaItems().size());

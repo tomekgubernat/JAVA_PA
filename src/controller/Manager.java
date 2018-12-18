@@ -10,10 +10,16 @@ public class Manager extends User {
     }
 
     public void addToMediatheque(MediaItems item){
+        if (item == null){
+            return;
+        }
         mediatheque.addMediaItems(item);
     }
 
     public void removeFromMediatheque(MediaItems item){
+        if (item == null){
+            return;
+        }
         mediatheque.removeMediaItems(item);
 
     }

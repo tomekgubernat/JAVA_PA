@@ -3,95 +3,67 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="965.8181818181818" y="263.0">model.Book</node>
-    <node x="0.0" y="33.0">model.Watchable</node>
-    <node x="1038.5681818181818" y="33.0">model.Readable</node>
-    <node x="250.8181818181818" y="263.0">model.MusicAlbum</node>
-    <node x="164.99999999999994" y="33.0">model.Listenable</node>
-    <node x="344.56818181818176" y="453.0">controller.Manager</node>
-    <node x="63.65151515151513" y="252.0">model.Movie</node>
-    <node x="412.81818181818176" y="197.0">controller.User</node>
-    <node x="706.8181818181818" y="241.0">persistence.Mediatheque</node>
-    <node x="412.1515151515151" y="0.0">model.MediaItems</node>
+    <node x="70.25" y="212.0">model.Movie</node>
+    <node x="669.25" y="223.0">model.Book</node>
+    <node x="37.0" y="376.0">controller.User</node>
+    <node x="0.0" y="55.5">model.Watchable</node>
+    <node x="377.0" y="376.0">persistence.Mediatheque</node>
+    <node x="793.75" y="55.5">model.Readable</node>
+    <node x="440.0" y="0.0">model.MediaItems</node>
+    <node x="350.25" y="223.0">model.MusicAlbum</node>
+    <node x="165.0" y="55.5">model.Listenable</node>
+    <node x="0.0" y="568.0">controller.Manager</node>
   </nodes>
   <notes />
   <edges>
     <edge source="model.Movie" target="model.Watchable">
-      <point x="-48.33333333333334" y="-48.0" />
-      <point x="87.81818181818176" y="177.0" />
-      <point x="72.5" y="177.0" />
+      <point x="-86.66666666666674" y="-59.5" />
+      <point x="113.58333333333326" y="192.0" />
+      <point x="72.5" y="192.0" />
       <point x="0.0" y="25.5" />
     </edge>
     <edge source="model.Movie" target="model.Listenable">
-      <point x="0.0" y="-48.0" />
-      <point x="136.15151515151513" y="137.0" />
-      <point x="200.24999999999994" y="137.0" />
+      <point x="0.0" y="-59.5" />
       <point x="-35.25" y="25.5" />
     </edge>
     <edge source="model.Book" target="model.Readable">
-      <point x="46.75" y="-37.0" />
+      <point x="64.0" y="-48.5" />
       <point x="0.0" y="25.5" />
     </edge>
     <edge source="model.MusicAlbum" target="model.MediaItems">
-      <point x="35.25" y="-37.0" />
-      <point x="356.5681818181818" y="157.0" />
-      <point x="446.6515151515151" y="157.0" />
-      <point x="-57.5" y="58.5" />
-    </edge>
-    <edge source="persistence.Mediatheque" target="model.MediaItems">
-      <point x="0.0" y="-59.0" />
-      <point x="826.3181818181818" y="157.0" />
-      <point x="561.6515151515151" y="157.0" />
-      <point x="57.5" y="58.5" />
+      <point x="74.75" y="-48.5" />
+      <point x="0.0" y="81.0" />
     </edge>
     <edge source="model.MusicAlbum" target="model.Listenable">
-      <point x="-35.25" y="-37.0" />
-      <point x="286.0681818181818" y="137.0" />
-      <point x="270.74999999999994" y="137.0" />
+      <point x="-74.75" y="-48.5" />
+      <point x="425.0" y="182.0" />
+      <point x="270.75" y="182.0" />
       <point x="35.25" y="25.5" />
     </edge>
-    <edge source="controller.User" target="model.MediaItems">
-      <point x="91.33333333333337" y="-103.0" />
-      <point x="641.1515151515151" y="167.0" />
-      <point x="538.6515151515151" y="167.0" />
-      <point x="34.5" y="58.5" />
-    </edge>
     <edge source="model.Book" target="model.MediaItems">
-      <point x="-46.75" y="-37.0" />
-      <point x="1012.5681818181818" y="147.0" />
-      <point x="584.6515151515151" y="147.0" />
-      <point x="80.5" y="58.5" />
+      <point x="-64.0" y="-48.5" />
+      <point x="733.25" y="192.0" />
+      <point x="664.1666666666667" y="192.0" />
+      <point x="89.66666666666669" y="81.0" />
     </edge>
     <edge source="model.Movie" target="model.MediaItems">
-      <point x="48.33333333333334" y="-48.0" />
-      <point x="184.4848484848485" y="147.0" />
-      <point x="423.6515151515151" y="147.0" />
-      <point x="-80.5" y="58.5" />
+      <point x="86.66666666666663" y="-59.5" />
+      <point x="286.91666666666663" y="192.0" />
+      <point x="484.8333333333333" y="192.0" />
+      <point x="-89.66666666666669" y="81.0" />
     </edge>
     <edge source="controller.Manager" target="controller.User">
-      <point x="65.75" y="-48.0" />
-      <point x="541.8181818181818" y="428.0" />
-      <point x="549.8181818181818" y="428.0" />
-      <point x="0.0" y="103.0" />
-    </edge>
-    <edge source="controller.Manager" target="model.MediaItems">
-      <point x="-65.75" y="-48.0" />
-      <point x="410.31818181818176" y="428.0" />
-      <point x="402.31818181818176" y="428.0" />
-      <point x="402.31818181818176" y="167.0" />
-      <point x="469.6515151515151" y="167.0" />
-      <point x="-34.5" y="58.5" />
+      <point x="0.0" y="-48.0" />
+      <point x="0.0" y="71.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.8111946532999165" x="588.5" y="274.5" />
-  <SelectedNodes>
-    <node>persistence.Mediatheque</node>
-  </SelectedNodes>
+  <settings layout="Hierarchic Group" zoom="0.814415310053436" x="406.3919372558594" y="358.583984375" />
+  <SelectedNodes />
   <Categories>
     <Category>Fields</Category>
-    <Category>Properties</Category>
-    <Category>Methods</Category>
     <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
   </Categories>
   <SCOPE>Production</SCOPE>
   <VISIBILITY>private</VISIBILITY>
