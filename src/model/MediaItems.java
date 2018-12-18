@@ -6,7 +6,8 @@ public class MediaItems {
     private String title;
     private String author;
     private Date releaseDate;
-    private boolean availability;
+    private boolean isAvailable = true;
+    private boolean isReserved = false;
 
     MediaItems(String title, String author, Date releaseDate){
         this.title = title;
@@ -14,8 +15,11 @@ public class MediaItems {
         this.releaseDate = releaseDate;
     }
 
-    public void setAvailability(boolean availability){
-        this.availability = availability;
+    public void setAvailable(boolean isAvailable){
+        this.isAvailable = isAvailable;
+    }
+    public void setReserved(boolean isReserved){
+        this.isReserved = isReserved;
     }
 
 
@@ -31,7 +35,10 @@ public class MediaItems {
         return releaseDate;
     }
 
-    public boolean isAvailability() {
-        return availability;
+    public boolean isAvailable() {
+        return isAvailable;
+    }
+    public boolean isReserved() {
+        return isReserved;
     }
 }

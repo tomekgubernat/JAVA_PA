@@ -23,14 +23,14 @@ public class User {
 //    }
 
     public void rentItem(MediaItems item){
-        if(item.isAvailability()){
-            item.setAvailability(false);
+        if(item.isAvailable() && !(item.isReserved())){
+            item.setAvailable(false);
             rentedList.add(item);
         }
     }
 
     public void returnItem(MediaItems item){
-        item.setAvailability(true);
+        item.setAvailable(true);
         rentedList.remove(item);
     }
 
