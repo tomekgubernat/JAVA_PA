@@ -14,13 +14,13 @@ public class User {
         this.mediatheque = mediatheque;
     }
 
-    public void previewItem(){
-
-    }
-
-    public MediaItems search(){
-
-    }
+//    public void previewItem(){
+//
+//    }
+//
+//    public MediaItems search(){
+//
+//    }
 
     public void rentItem(MediaItems item){
         if(item.isAvailability()){
@@ -34,12 +34,12 @@ public class User {
         rentedList.remove(item);
     }
 
-    public boolean chceckAvailable(){
-
-    }
-    public boolean chceckReserved(){
-
-    }
+//    public boolean chceckAvailable(){
+//
+//    }
+//    public boolean chceckReserved(){
+//
+//    }
 
     public ArrayList<MediaItems> getRentedList() {
         return rentedList;
